@@ -81,7 +81,7 @@ body{
     display: none;
 }
 
-        .hovered{
+        #boxlist-small .hovered{
             position: absolute; 
             transform:translateY(-105px);
         }
