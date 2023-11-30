@@ -1,0 +1,153 @@
+*{
+    box-sizing:border-box;
+    font-family: Verdana, Arial, sans-serif;
+    color: white;
+}
+
+body{
+    margin: 0;
+    padding: 10px;
+    background-color: #222222;
+}
+
+#boxlist-small,
+#boxlist-medium,
+#boxlist-big{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: stretch;
+    background-color: black;
+}
+
+
+    #brand-logo,
+    .box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color:rgb(70, 70, 70);
+        height: 50px;
+        margin: 1px;
+    }
+
+    #brand-logo{
+
+        flex-basis: 300px; 
+        flex-shrink: 0;
+    }
+    
+    #brand-logo:hover, .box:hover{
+        
+        background-color: rgb(143, 250, 139);
+        color: #222222;
+        cursor: pointer;
+    }
+    
+            #logo{
+                
+                display: block;
+                height:100%;
+            }
+            div:hover #brand{
+    
+                color: #222222;
+            }
+            
+#boxlist-medium{
+    display: none;
+}
+
+        .hovered{
+            position: absolute;
+            translate: 0% 100%;
+            width: 200px;
+        }
+
+        div > .hovered{
+            display: none;
+        }
+
+        div:hover > .hovered{
+            display: flex;
+            cursor: pointer;
+        }
+
+
+#boxlist-small{
+    display: none;
+}
+
+        .hovered{
+            position: absolute; 
+            transform:translateY(-105px);
+        }
+
+        div > .hovered{
+            display: none;
+        }
+
+        div:hover > .hovered{
+            display: flex;
+            cursor: pointer;
+        }
+
+
+#boxlist-medium{
+    display: none;
+}
+
+        .hovered{
+            position: absolute;
+            translate: 0% 100%;
+            width: 200px;
+        }
+
+        div > .hovered{
+            display: none;
+        }
+
+        div:hover > .hovered{
+            display: flex;
+            cursor: pointer;
+        }
+
+
+@media (max-width:940px){
+    #boxlist-big{
+        display: none;
+    }
+    #boxlist-medium{
+        display: flex;
+    }
+    #brand-logo{
+ 
+        flex-basis: 150px; 
+        flex-shrink: 0;
+    }
+}
+
+@media (max-width:600px){
+    #boxlist-big{
+        display: none;
+    }
+    #boxlist-medium{
+        display: none;
+    }
+    #boxlist-small{
+        display: flex;
+    }
+    #brand-logo{
+ 
+        flex-basis: 150px; 
+        flex-shrink: 0;
+    }
+    .hovered{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
